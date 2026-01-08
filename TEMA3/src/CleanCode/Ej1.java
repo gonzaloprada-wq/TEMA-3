@@ -1,13 +1,13 @@
 package CleanCode;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Ej1 {
 	public static void main(String[] args) {
 		// Inicializar scanner para leer la entrada
 		Scanner scanner = new Scanner(System.in);
 
-		// Constantes del sistema (valores fijos)
+		// Constantes del sistema (valores fijos) he cambiado el nombre a todo y lo he ordenado segun si es FInAl, double, int etc...
 		final double IVA = 0.21;
 		final double DESCUENTO_MAYOR_100 = 0.10;
 		final double DESCUENTO_SOCIO = 0.05;
@@ -43,11 +43,11 @@ public class Ej1 {
 
 			// Bucle para recoger información de cada producto
 			for (int indice = 0; indice < cantidadProductos; indice++) {
-				// Pedir el nombre del producto
+				// Esto sirve para pedir el nombre del producto
 				System.out.println("Nombre del producto " + (indice + 1) + ":");
 				nombresProductos[indice] = scanner.nextLine();
 
-				// Pedir el precio del producto
+				//Esto de aqui sirve para edir el precio del producto
 				System.out.println("Precio del producto:");
 				preciosProductos[indice] = scanner.nextDouble();
 
@@ -56,7 +56,7 @@ public class Ej1 {
 				unidadesProductos[indice] = scanner.nextInt();
 				scanner.nextLine(); // Limpiar el buffer
 
-				// Acumular el subtotal (precio * cantidad)
+				// Esto srive para acumular el subtotal (precio * cantidad)
 				subtotal += preciosProductos[indice] * unidadesProductos[indice];
 
 				// Calcular el indice del stock usando una formula
@@ -69,7 +69,7 @@ public class Ej1 {
 				}
 			}
 
-			// Preguntar si el cliente es socio para aplicar descuento
+			// Preguntar si el cliente es socio para aplicar descuento o no
 			System.out.println("¿Es socio? (S/N)");
 			String respuestaSocio = scanner.nextLine();
 			boolean esSocio = respuestaSocio.equalsIgnoreCase("S");
@@ -112,7 +112,7 @@ public class Ej1 {
 	}
 
 	// Funcion para imprimir el ticket de compra
-	private static void imprimirTicket(String[] nombresProductos, double[] preciosProductos, int[] unidadesProductos,
+	public static void imprimirTicket(String[] nombresProductos, double[] preciosProductos, int[] unidadesProductos,
 			double subtotal, double descuentoMayor100, double descuentoSocio, double baseImponible, double ivaCalculado,
 			double total) {
 		System.out.println("\n=========== TICKET ===========");
