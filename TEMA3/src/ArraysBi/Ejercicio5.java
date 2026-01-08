@@ -16,10 +16,6 @@ public class Ejercicio5 {
 			 tabla[i][j]=rand.nextInt(900)+100;
 				
 			}
-		}
-		
-		
-		
-		
+		}		
 	}
 }
